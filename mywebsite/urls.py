@@ -2,12 +2,10 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from . import views
-# from about import views as aboutViews
+from percentage_char.views import PercentageView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^blog/', include('blog.urls')),
-    url(r'^about/', include('about.urls')),
-    url(r'^percentage_char/', include('percentage_char.urls')),
     url(r'^$', views.index),
+    url(r'^percentage_char/', PercentageView.as_view(template_name="percentage/index.html")),
 ]

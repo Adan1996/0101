@@ -5,10 +5,26 @@
 <!-- my css -->
 <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
 <!-- <link rel="stylesheet" href="{% static app_css %}"> -->
-<link rel="stylesheet" href="{% static 'about/css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'percentage/css/style.css' %}">
 {% endblock app_css %}
 
 {% block header %}
 <h1 class="text-left" style="margin-top: 100px; margin-left: 100px;">{{ judul }}</h1>
 <p class="lead text-left" style="margin-left: 100px;">{{ content }}</p>
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group row" style="margin-left: 100px;">
+        {{form.type_alfabet}}
+    </div>
+    <div class="form-group row" style="margin-left: 100px;">
+        {{form.sentence}}
+    </div>
+    <button type="submit" class="btn btn-secondary">Calculate</button>
+
+</form>
+<div class="form-group row" style="margin-left: 100px;">
+    <input class="form-control form-control-lg" type="text" value="{{ result }}%" style="max-width: 50%;" readonly>
+</div>
 {% endblock header %}
