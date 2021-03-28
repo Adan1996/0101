@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block app_css %}
+<!-- my css -->
+<!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+<!-- <link rel="stylesheet" href="{% static app_css %}"> -->
+<link rel="stylesheet" href="{% static 'about/css/styles.css' %}">
+{% endblock app_css %}
+
+{% block header %}
+<h1 class="text-left" style="margin-top: 100px; margin-left: 100px;">{{ judul }}</h1>
+<p class="lead text-left" style="margin-left: 100px;">{{ content }}</p>
+{% endblock header %}
