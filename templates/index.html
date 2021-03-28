@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h1 class="display-4">{{ content }}</h1>
+<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+{% endblock header %}
+
+{% block content-1 %}
+<div class="row" style="height: 800px;">
+    <h1>write your content 1 here</h1>
+</div>
+{% endblock content-1 %}
+
+{% block content-2 %}
+<div class="row" style="height: 800px;">
+    <h1>Overload content 2</h1>
+</div>
+{% endblock content-2 %}
